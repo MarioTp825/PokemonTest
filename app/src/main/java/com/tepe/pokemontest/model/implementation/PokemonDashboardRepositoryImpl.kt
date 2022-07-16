@@ -51,7 +51,7 @@ class PokemonDashboardRepositoryImpl(
         response.body()?.let {
             currentPage++
             CoroutineScope(Dispatchers.IO).launch {
-                it.results?.forEach { rs ->
+                it.results?.asReversed()?.forEach { rs ->
                     rs?.let {
                         resourceCollection.push(it)
                     }
