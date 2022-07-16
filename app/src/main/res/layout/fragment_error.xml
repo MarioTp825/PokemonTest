@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="30dp"
+    tools:context=".view.implementation.ErrorDialogFragment">
+
+    <TextView
+        android:id="@+id/tvErrorTitle"
+        android:text="@string/lbl_error_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btnTryAgain"
+        android:fontFamily="@font/helvetica_neu_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvErrorSubtitle"
+        android:text="@string/lbl_error_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helvetica_neue"
+        android:textFontWeight="900"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvErrorTitle" />
+
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/btnTryAgain"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="@string/try_again"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:chipBackgroundColor="@color/primary_color"
+        android:fontFamily="@font/helvetica_neu_bold"
+        android:textStyle="bold"
+        android:textSize="@dimen/btn_text_size"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/pikachu_error"
+        android:layout_marginBottom="-20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
